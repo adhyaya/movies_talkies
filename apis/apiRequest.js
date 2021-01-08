@@ -42,11 +42,11 @@ export default function request({
     case apiMethods.DELETE:
       apiRequest = database.ref(_url).push().set({ isDeleted: true });
       break;
+    case apiMethods.AUTH:
+      apiRequest = firebase.auth().createUserWithEmailAndPassword(payload);
+      break;
     default:
       break;
   }
-  // if (token) {
-  //   apiRequest.set('Authorization', token);
-  // }
   return apiRequest;
 }

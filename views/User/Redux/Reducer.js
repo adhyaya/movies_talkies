@@ -4,7 +4,7 @@
 import {
   FETCH_USER_START, ERROR_USER,
   FETCH_USER_END, LOGOUT_USER,
-} from '../constants/user';
+} from './ActionType';
 
 // ------------------------------------
 // Reducer Handlers

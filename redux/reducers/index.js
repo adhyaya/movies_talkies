@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
-import user, { clearReduxOnLogout } from './user';
-import login from './login';
-import notification from './notification';
+import user, { clearReduxOnLogout } from '../../views/User/Redux/Reducer';
+import login from '../../views/Login/Redux/Reducer';
+import notification from '../../views/Notification/Redux/Reducer';
 
 const combinedReducers = combineReducers({
   login,

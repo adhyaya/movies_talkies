@@ -1,0 +1,7 @@
+const actionTypes = {
+  STOP_LOADER: 'STOP_LOADER',
+  START_LOADER: 'START_LOADER',
+  LOGOUT_SUCCESS: 'LOGOUT_SUCCESS',
+  OPEN_CONFIRM_MODAL: 'OPEN_CONFIRM_MODAL',
+};
+export default actionTypes;

@@ -1,3 +1,6 @@
 {
-  "test": "test"
+  "email": "Email Address",
+  "login": "login",
+  "password": "password",
+  "thisfieldisrequired": "This field is required"
 }
