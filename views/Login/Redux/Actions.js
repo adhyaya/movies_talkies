@@ -19,8 +19,11 @@ export function clearLoginApiState() {
  * this action is used to hit the login API
  */
 export function loginUserAction(payload) {
+  console.log('====');
   return ActionDispatcher(loginUserService.bind(null, payload),
     ActionTypes.LOGIN_USER_SUCCESS,
     ActionTypes.LOGIN_USER_FAILED,
-    ActionTypes.LOGIN_USER_LOADING);
+    ActionTypes.LOGIN_USER_LOADING, null, {
+      loader: true,
+    });
 }

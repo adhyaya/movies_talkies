@@ -27,6 +27,7 @@ export default function request({
 
   const database = firebase.database();
   let apiRequest = null;
+  console.log('===', payload);
   // declaring method
   switch (method) {
     case apiMethods.GET:
@@ -43,7 +44,7 @@ export default function request({
       apiRequest = database.ref(_url).push().set({ isDeleted: true });
       break;
     case apiMethods.AUTH:
-      apiRequest = firebase.auth().createUserWithEmailAndPassword(payload);
+      apiRequest = firebase.auth().createUserWithEmailAndPassword(payload.email, payload.password);
       break;
     default:
       break;
