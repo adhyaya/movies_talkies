@@ -444,7 +444,8 @@ function FormFields({
         <Form
           form={form}
           colon={false}
-          requiredMark={false}
+          // requiredMark="false"
+          hideRequiredMark="true"
         >
           {formFields && formFields.map((field) => {
             const rules = [];
@@ -533,7 +534,7 @@ FormFields.propTypes = {
   actions: PropTypes.object,
   handleMapClick: PropTypes.func,
   formFields: PropTypes.array.isRequired,
-  form: PropTypes.func.isRequired,
+  form: PropTypes.object.isRequired,
 };
 
 const mapStateToProps = (state) => ({

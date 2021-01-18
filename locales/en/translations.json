@@ -3,5 +3,9 @@
   "login": "login",
   "password": "password",
   "thisfieldisrequired": "This field is required",
-  "name": "name"
+  "name": "name",
+  "length": "length",
+  "cast": "cast",
+  "numberError": "Length should be a number",
+  "search": "search"
 }

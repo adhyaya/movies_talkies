@@ -8,7 +8,7 @@ import Button from '../../common/components/Button';
 import CustomForm from '../../common/components/Form';
 
 /* import constants */
-import { loginFormFields } from '../../common/constants/constants';
+import { addEditWebseriesFormFields } from '../../common/constants/constants';
 
 /* import styles */
 import './AddEditWebseries.less';
@@ -18,13 +18,14 @@ import strings from '../../locales/strings';
 function AddEditWebseriesUI({
   form,
   onSubmitHandler,
+  config,
 }) {
   return (
     <div className="login">
       <div className="formContainer">
         <CustomForm
           form={form}
-          formFields={loginFormFields()}
+          formFields={addEditWebseriesFormFields(config)}
         />
         <Button
           className="loginButton"
@@ -42,6 +43,7 @@ function AddEditWebseriesUI({
 AddEditWebseriesUI.propTypes = {
   form: PropTypes.object.isRequired,
   onSubmitHandler: PropTypes.func.isRequired,
+  config: PropTypes.object.isRequired,
 };
 
 export default AddEditWebseriesUI;

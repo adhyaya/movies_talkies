@@ -32,7 +32,7 @@ function LoginComponent(props) {
     if (isSuccess) {
       clearLoginApiState();
     }
-  }, loginApiState);
+  }, [loginApiState]);
 
   const onSubmitHandler = () => {
     const values = form.getFieldsValue();

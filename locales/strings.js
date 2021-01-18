@@ -4,4 +4,8 @@ export default {
   password: 'password',
   thisfieldisrequired: 'thisfieldisrequired',
   name: 'name',
+  length: 'length',
+  cast: 'cast',
+  numberError: 'numberError',
+  search: 'search',
 };

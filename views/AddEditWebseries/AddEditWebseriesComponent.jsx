@@ -32,14 +32,23 @@ function AddEditWebseriesComponent(props) {
     if (isSuccess) {
       clearLoginApiState();
     }
-  }, loginApiState);
+  }, [loginApiState]);
+
+  const config = {
+    castDropdownHandler: () => {
+      console.log('in cast handler');
+    },
+  };
 
   const onSubmitHandler = () => {
+    console.log(form);
     const values = form.getFieldsValue();
+    console.log(values);
     form.validateFields().then(() => {
+      console.log(values);
       const payload = {
-        email: values.email,
-        password: values.password,
+        email: values.name,
+        password: values.cast,
       };
       loginUserAction(payload);
     });
@@ -48,6 +57,7 @@ function AddEditWebseriesComponent(props) {
     <AddEditWebseriesUI
       form={form}
       onSubmitHandler={onSubmitHandler}
+      config={config}
     />
   );
 }
