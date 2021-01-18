@@ -24,4 +24,14 @@ export const loginFormFields = () => [
   },
 ];
 
+export const addEditWebseriesFormFields = ()=>[
+  {
+    label: strings.name,
+    key: keys.name,
+    type: keys.text,
+    max:100,
+    required:[true,strings.thisfieldisrequired]
+  }
+]
+
 export default keys;
